@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decode the Code</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stars.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; /* Stacks children vertically */
+            align-items: center;   /* Centers children horizontally */
+            justify-content: center; /* Centers children vertically */
+            background-color: black; /* Optional for better visibility */
+        }
+    
+        .random-text {
+            font-weight: bold;
+            font-size: 2rem;
+            color: #00ff00;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <p>00110001 00110011 00110010 00110001 00110100 01011011 01101101 01100101 01110010 01110010 01111001 00100000 01100011 01101000 01110010 01101001 01110011 01110100 01101101 01100001 01110011 01011101 00110001 00110000 00110011 00110100 00111000 00110011 </p>
+    <a class="random-text link" id="randomText" href="Level2.html">--</a>
+    <script>
+        // Function to generate a random string of letters and numbers
+        function generateRandomString(length) {
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let result = "";
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
+
+        // Function to update the content of the element with random text
+        function updateRandomText() {
+            const randomTextElement = document.getElementById("randomText");
+            randomTextElement.textContent = generateRandomString(10); // Change 10 to desired length
+        }
+
+        // Update the text every 100 milliseconds
+        setInterval(updateRandomText, 100);
+    </script>
+</body>
+</html>

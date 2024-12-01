@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menacing Black Hole</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, black, #0b0b0b 60%, #1a1a1a);
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .black-hole {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #000000, #1a1a1a 50%, #3a3a3a 70%, black 90%);
+            box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.95), inset 0 0 80px 10px rgba(50, 0, 0, 0.8);
+            animation: shake 0.5s infinite alternate ease-in-out;
+        }
+
+        .button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #000000, #800000);
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(5, 5, 5, 0.9), inset 0 0 15px rgba(27, 27, 27, 0.7);
+            cursor: pointer;
+            z-index: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 0 40px rgb(0, 0, 0), inset 0 0 30px rgba(0, 0, 0, 0.9);
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translate(-3px, -3px);
+            }
+            25% {
+                transform: translate(3px, -3px);
+            }
+            50% {
+                transform: translate(3px, 3px);
+            }
+            75% {
+                transform: translate(-3px, 3px);
+            }
+            100% {
+                transform: translate(-3px, -3px);
+            }
+        }
+        .title{
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="black-hole">
+        <h1 class="title">THE END</h1>
+        <a href="FinalPage.html" class="button">Enter</a>
+    </div>
+</body>
+</html>

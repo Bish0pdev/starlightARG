@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bishop's Place</title>
+    <style>
+        body {
+            display: none; /* Hide the page content initially */
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Set font to Comic Sans */
+            background: url('your-background-gif.gif') no-repeat center center fixed; /* Replace with your desired GIF URL */
+            background-size: cover; /* Ensures the background covers the entire page */
+            color: rgb(0, 0, 0); /* Black text color for visibility */
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 20vh; /* Center the title vertically */
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Subtle shadow for readability */
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center; /* Centers the video horizontally */
+            flex-direction: column;
+            align-items: center; /* Optionally centers vertically (if needed) */
+            height: 50vh; /* Adjust as needed for vertical spacing */
+        }
+
+        video {
+            max-width: 90%; /* Ensures video scales appropriately on smaller screens */
+            border: 2px solid white; /* Optional styling for the video */
+            border-radius: 10px; /* Optional rounded corners for the video */
+        }
+    </style>
+    <script>
+        // Password to access the page
+        const correctPassword = "XTPQJ";
+
+        // Function to check the password with retry
+        function checkPassword() {
+            while (true) {
+                const userPassword = prompt("Please enter the password to access Bishop's Place:");
+                if (userPassword === null) {
+                    // User canceled the prompt
+                    alert("Access canceled.");
+                    location.href = 'Level1.html';
+                    return;
+                } else if (userPassword === correctPassword) {
+                    document.body.style.display = "block"; // Show the page content
+                    return;
+                } else {
+                    alert("Incorrect password. Please try again.");
+                }
+            }
+        }
+
+        // Trigger the password prompt before the page loads
+        window.onload = checkPassword;
+    </script>
+</head>
+<body>
+    <div class="title">Bishop's Place</div>
+    
+    <!-- Video Container -->
+    <div class="video-container">
+        <video id="player" src="videoplayback.mp4" autoplay loop></video>
+        <p>You found me :]]</p>
+        <p>Try this link!</p>
+        <a href="https://pastebin.com/embed_js/WT5nsV2t" target="_blank">:]]]]] (hint: im going to base your 64!!!!)</a>
+
+        <a href="theend.html" target="_blank">th3 end.</a>
+    </div>
+
+    <script>
+        // Play the video on user interaction (optional)
+        document.addEventListener('click', musicPlay);
+        function musicPlay() {
+            document.getElementById('player').play();
+            document.removeEventListener('click', musicPlay);
+        }
+    </script>
+</body>
+</html>

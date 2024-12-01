@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congrats!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stars.css">
+    <style>
+        .spoiler-text {
+            text-align: center;
+            background: rgb(255, 255, 255);
+            color: transparent;
+            transition: background 0.3s ease 0.2s, color 0.2s ease 0.25s;
+        }
+
+        .spoiler-text:hover,
+        .spoiler-text:focus {
+            background: #000000;
+            color: white;
+            color: inherit;
+        }
+    </style>
+    <script>
+        // Password to access the page
+        const correctPassword = "JUNIPER";
+
+        // Function to check the password with retry
+        function checkPassword() {
+
+            while (true) {
+                const userPassword = prompt("Please enter the password to access this page:");
+                if (userPassword === null) {
+                    // User canceled the prompt
+                    alert("Access canceled.");
+                    location.href = 'Level1.html'
+                    return;
+                } else if (userPassword === correctPassword) {
+                    document.body.style.display = "block"; // Show the page content
+                    return;
+                } else {
+                    alert(`Incorrect password.`);
+                }
+            }
+        }
+
+        // Trigger the password prompt before the page loads
+        window.onload = checkPassword;
+    </script>
+</head>
+<body>
+    <iframe src="250-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <h1>Good Job!</h1>
+    <p style="text-align: center;">Your secret code is</p>
+    <p class="spoiler-text" id="spoiler">X7L3Q9W2Z8Y5P1M</p>
+    <p style="text-align: center;">Please DM it to bishopdev to confirm!</p>
+    <a href="index.html">Take me back!</a>
+    <audio id="player" autoplay controls><source src="dandelion_hands_-_wren_s_lullaby_[_YTBMP3.org_].mp3" type="audio/mp3"></audio>
+    <script>
+        document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('player').play();
+    document.removeEventListener('click', musicPlay);
+}
+    </script>
+</body>
+</html>

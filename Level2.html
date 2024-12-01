@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Page</title>
+    <style>
+        body {
+            display: none; /* Hide the page content initially */
+            font-family: Arial, sans-serif;
+            background: url('5a934e84f67d2a61a118ec95b1d6cb74.gif') no-repeat center center fixed; /* Replace with your GIF URL */
+            background-size: cover; /* Ensures the GIF covers the entire page */
+            color: white; /* Adjust text color for visibility on the GIF */
+        }
+
+        .alert {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+        }
+    </style>
+    <script>
+        // Password to access the page
+        const correctPassword = "13214[merry christmas]103483";
+
+        // Function to check the password with retry
+        function checkPassword() {
+
+            while (true) {
+                const userPassword = prompt("Please enter the password to access this page:");
+                if (userPassword === null) {
+                    // User canceled the prompt
+                    alert("Access canceled.");
+                    location.href = 'Level1.html'
+                    return;
+                } else if (userPassword === correctPassword) {
+                    document.body.style.display = "block"; // Show the page content
+                    return;
+                } else {
+                    alert(`Incorrect password.`);
+                }
+            }
+        }
+
+        // Trigger the password prompt before the page loads
+        window.onload = checkPassword;
+    </script>
+</head>
+<body>
+    <div class="alert">
+        <a href="Level3.html"><img src="jjjj-moshed-11-30-09-48-07-282.gif"></a>
+    </div>
+</body>
+</html>

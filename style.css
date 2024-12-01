@@ -1,0 +1,85 @@
+/* Base styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: #dcdcdc;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h3 {
+    text-align: center;
+    color: #8affc1;
+    text-shadow: 2px 2px 4px rgba(207, 207, 207, 0.6);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs and lists */
+p, ul {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 0 10px;
+}
+
+ul {
+    list-style: square;
+    color: #ffbb55;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* Link styling */
+a {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: 200px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #8a2be2; /* Purple */
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    background-color: #5a189a;
+    transform: scale(1.1);
+}
+
+/* Box shadow for visual interest */
+p, ul {
+    background: rgba(71, 71, 71, 0.5);
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Special effect for h1 */
+h1 {
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #8affc1, 0 0 10px #8affc1, 0 0 20px #8affc1;
+    }
+    50% {
+        text-shadow: 0 0 10px #8affc1, 0 0 20px #8affc1, 0 0 30px #8affc1;
+    }
+    100% {
+        text-shadow: 0 0 5px #8affc1, 0 0 10px #8affc1, 0 0 20px #8affc1;
+    }
+}
